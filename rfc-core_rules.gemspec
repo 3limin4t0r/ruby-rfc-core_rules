@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.summary       = 'RFC Core Rules regex'
   spec.description   = 'This gem provides regexps matching the RFC Core ' \
                        'Rules, found in RFC5234 Appendix B.1.'
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = 'https://github.com/3limin4t0r/ruby-rfc-core_rules'
   spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -24,9 +24,9 @@ Gem::Specification.new do |spec|
           'public gem pushes.'
   end
 
-  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
-    f.match(%r{^(test|spec|features)/})
-  end
+  spec.files         = `git ls-files -z`
+                       .split("\x0")
+                       .reject { |f| f.match?(%r{^(test|spec|features)/}) }
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
