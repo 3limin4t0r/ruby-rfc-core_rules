@@ -1,3 +1,5 @@
+# encoding: US-ASCII
+
 require 'rfc/core_rules/version'
 
 module Rfc # :nodoc:
@@ -13,7 +15,7 @@ module Rfc # :nodoc:
     ALPHA          =  /[\x41-\x5A]|[\x61-\x7A]/.freeze
 
     # 0 / 1
-    BIT            =  /0|1/
+    BIT            =  /0|1/.freeze
 
     # any 7-bit US-ASCII character,
     # excluding NUL
